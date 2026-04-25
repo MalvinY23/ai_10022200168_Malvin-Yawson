@@ -42,7 +42,11 @@ class EmbeddingPipeline:
         print(f"[Embedder] Loading model: {model_name} …")
         self.model_name = model_name
         self.model = SentenceTransformer(model_name)
-        self.embedding_dim = self.model.get_sentence_embedding_dimension()
+        # Support both old and new sentence-transformers API
+        if hasattr(self.model, 'get_embedding_dimension'):
+            self.embedding_dim = self.model.get_embedding_dimension()
+        else:
+            self.embedding_dim = self.model.get_sentence_embedding_dimension()
         print(f"[Embedder] Embedding dimension: {self.embedding_dim}")
 
     # ──────────────────────────────────────────────────────────────────

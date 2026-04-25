@@ -72,9 +72,9 @@ def load_election_csv(local_path: str = "data/Ghana_Election_Result.csv") -> Lis
     # 4. Fill NaN numerics with 0, strings with "Unknown"
     for col in df.columns:
         if df[col].dtype == object:
-            df[col].fillna("Unknown", inplace=True)
+            df[col] = df[col].fillna("Unknown")
         else:
-            df[col].fillna(0, inplace=True)
+            df[col] = df[col].fillna(0)
 
     # 5. Remove duplicate rows
     before = len(df)
