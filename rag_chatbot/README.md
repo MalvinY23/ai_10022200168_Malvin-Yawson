@@ -7,7 +7,7 @@
 | **Course** | CS4241 - Introduction to Artificial Intelligence |
 | **Institution** | Academic City University College, Ghana |
 | **Year** | 2026 |
-| **Repository** | `ai_10022200168` |
+| **Repository** | `ai_10022200168_Malvin-Yawson` |
 
 ---
 
