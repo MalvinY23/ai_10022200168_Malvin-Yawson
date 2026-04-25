@@ -1,0 +1,21 @@
+# Downloaded datasets and large files — auto-downloaded on first run
+data/
+
+# Cached embeddings and FAISS index — rebuilt automatically
+*.pkl
+*.index
+
+# Auto-generated session logs (keep manual log)
+experiment_logs/session_*.json
+experiment_logs/full_history.jsonl
+experiment_logs/feedback_store.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
